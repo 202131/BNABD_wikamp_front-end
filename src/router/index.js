@@ -1,29 +1,45 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import LoginAdminComponent from "../views/loginAdmin.vue"
+import LoginUserComponent from "../views/loginUser.vue"
+import LoginOptionsComponent from "../views/loginOptions.vue"
+import AdminPageComponent from "../views/AdminPage.vue"
+import UserPageComponent from "../views/UserPage.vue"
 
 Vue.use(VueRouter)
 
-  const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component: Home
-  },
-  {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
-]
-
-const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes
+export default new VueRouter({
+    routes: [
+        {
+            path: '/',
+            redirect: {
+                name: "loginOptions"
+            }
+        },
+        {
+            path: "/loginOptions",
+            name: "loginOptions",
+            component: LoginOptionsComponent
+        },
+        {
+            path: "/loginUser",
+            name: "loginUser",
+            component: LoginUserComponent
+        },
+        {
+            path: "/loginAdmin",
+            name: "loginAdmin",
+            component: LoginAdminComponent
+        },
+        {
+            path: "/AdminPage",
+            name: "AdminPage",
+            component: AdminPageComponent
+        },
+        {
+            path: "/UserPage",
+            name: "UserPage",
+            component: UserPageComponent
+        }
+    ]
 })
-
-export default router
