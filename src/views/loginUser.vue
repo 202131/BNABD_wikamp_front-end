@@ -1,10 +1,10 @@
 <template>
-    <div id="login">
-        <h1>Login User</h1>
-        <input type="text" name="username" v-model="input.username" placeholder="Username" />
-        <input type="password" name="password" v-model="input.password" placeholder="Password" />
-        <button type="button" v-on:click="login()">Login</button>
-         <button type="button" v-on:click="gotoOptionlogin()">Go Back</button>
+    <div class="text-center shadow p-3 mb-5 bg-light rounded-sm" id="login">
+        <h2>Login User</h2>
+        <input type="text" class="form-control m-2" name="username" v-model="input.username" placeholder="Username" />
+        <input type="password" class="form-control m-2" name="password" v-model="input.password" placeholder="Password" />
+        <button type="button" class="btn btn-success m-3" v-on:click="login()">Login</button>
+        <button type="button" class="btn btn-danger m-3" v-on:click="gotoOptionlogin()">Go Back</button>
     </div>
 </template>
 

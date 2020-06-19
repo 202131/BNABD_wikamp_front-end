@@ -6,6 +6,7 @@ import LoginComponent from "../views/Login.vue"
 import AdminPageComponent from "../views/AdminPage.vue"
 import UserPageComponent from "../views/UserPage.vue"
 import Faculty from "../components/Faculty.vue"
+import 'bootstrap';
 
 Vue.use(VueRouter)
 
