@@ -4,12 +4,13 @@
         
         <button type="button" v-on:click="gotoAdminlogin()">Admin</button>
         <button type="button" v-on:click="gotoUserlogin()">User</button>
+        <router-link class="btn btn-primary" to="/">Faculty</router-link>
     </div>
 </template>
 
 <script>
     export default {
-        name: 'LoginOptions',
+        name: 'Login',
         methods: {
             gotoAdminlogin() {
                 this.$router.replace({ name: "loginAdmin" });

@@ -1,9 +1,16 @@
 <template>
-    <div id="secure">
-        <h1>Admin Page</h1>
-        <p>
-            This is a Admin Page
-        </p>
+    <div id="app" class="container-fluid">
+        <div class="site-info">
+            <h1>Admin Page</h1>
+            
+        </div>
+        <nav>
+            <router-link class="btn btn-primary" to="/">Faculty</router-link>
+            <router-link class="btn btn-primary" to="/add">Add Faculty</router-link>
+            <router-link class="btn btn-primary" to="/search">Search Faculty</router-link>
+        </nav>
+        <br/>
+        <router-view/>
     </div>
 </template>
 
@@ -17,10 +24,16 @@
 </script>
 
 <style scoped>
-    #AdminPage {
-        background-color: #FFFFFF;
-        border: 1px solid #CCCCCC;
-        padding: 20px;
-        margin-top: 10px;
-    }
+    .site-info {
+  color: blue;
+  margin-bottom: 20px;
+}
+ 
+.btn-primary {
+  margin-right: 5px;
+}
+ 
+.container-fluid {
+  text-align: center;
+}
 </style>

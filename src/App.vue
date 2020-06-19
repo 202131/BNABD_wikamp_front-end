@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <div id="nav">
-            <router-link v-if="authenticated" to="/loginOptions" v-on:click.native="logout()" replace>Logout</router-link>
+            <router-link v-if="authenticated" to="/loginpage" v-on:click.native="logout()" replace>Logout</router-link>
         </div>
         <router-view @authenticated="setAuthenticated" />
     </div>
@@ -21,7 +21,7 @@
         },
         mounted() {
             if(!this.authenticated) {
-                this.$router.replace({ name: "loginOptions" });
+                this.$router.replace({ name: "loginpage" });
             }
         },
         methods: {

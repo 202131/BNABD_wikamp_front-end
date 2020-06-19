@@ -34,7 +34,7 @@
                 }
             },
             gotoOptionlogin() {
-                this.$router.replace({ name: "loginOptions" });
+                this.$router.replace({ name: "login" });
             }
         }
     }
