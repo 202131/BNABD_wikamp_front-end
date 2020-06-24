@@ -1,10 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import LoginAdminComponent from "../views/loginAdmin.vue"
-import LoginUserComponent from "../views/loginUser.vue"
 import LoginComponent from "../views/Login.vue"
 import AdminPageComponent from "../views/AdminPage.vue"
-import UserPageComponent from "../views/UserPage.vue"
 import Faculty from "../components/Faculty.vue"
 import 'bootstrap';
 
@@ -33,11 +31,6 @@ export default new VueRouter({
             component: LoginComponent
         },
         {
-            path: "/loginUser",
-            name: "loginUser",
-            component: LoginUserComponent
-        },
-        {
             path: "/loginAdmin",
             name: "loginAdmin",
             component: LoginAdminComponent
@@ -46,11 +39,6 @@ export default new VueRouter({
             path: "/AdminPage",
             name: "AdminPage",
             component: AdminPageComponent
-        },
-        {
-            path: "/UserPage",
-            name: "UserPage",
-            component: UserPageComponent
         }
     ]
 })

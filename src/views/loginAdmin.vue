@@ -1,6 +1,6 @@
 <template>
     <div class="text-center shadow p-3 mb-5 bg-light rounded-sm" id="login">
-        <h2>Login Admin</h2>
+        <h2>Login to system</h2>
         <input type="text" class="form-control m-2" name="username" v-model="input.username" placeholder="Username" />
         <input type="password" class="form-control m-2" name="password" v-model="input.password" placeholder="Password" />
         <button type="button" class="btn btn-success m-3" v-on:click="login()">Login</button>
@@ -34,7 +34,7 @@
                 }
             },
             gotoOptionlogin() {
-                this.$router.replace({ name: "login" });
+                this.$router.replace({ name: "loginpage" });
             }
         }
     }
